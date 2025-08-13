@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    color: #00ff41;
+    overflow: hidden;
+}
+
+.matrix-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: -1;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    text-align: center;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    animation: matrix-animation 10s linear infinite;
+}
+
+@keyframes matrix-animation {
+    0% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 0.9;
+    }
+}
+
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    border: 2px solid #00ff41;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px #00ff41;
+}
+
+#display {
+    width: 100%;
+    height: 50px;
+    background-color: #000;
+    color: #00ff41;
+    border: 1px solid #00ff41;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: right;
+    font-size: 2em;
+    padding: 5px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.buttons button {
+    height: 60px;
+    font-size: 1.5em;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #00ff41;
+    border: 1px solid #00ff41;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.buttons button:hover {
+    background-color: rgba(0, 255, 65, 0.2);
+}
